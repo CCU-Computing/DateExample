@@ -144,11 +144,11 @@ namespace DateProject{
         }
 
         
-        public Date AddOneMonth(Date theDate) {
-             if(theDate.Month==12) {
-                    return new Date(theDate.Year+1, 1, InvalidDayForMonth(1,theDate.Day)? MaxDayOfMonth(1):theDate.Day);
+        public Date AddOneMonth() {
+             if(this.Month==12) {
+                    return new Date(this.Year+1, 1, InvalidDayForMonth(1,this.Day)? MaxDayOfMonth(1):this.Day);
                 }
-             else return new Date(theDate.Year, theDate.Month+1,InvalidDayForMonth(theDate.Month+1,theDate.Day)? MaxDayOfMonth(theDate.Month+1):theDate.Day );
+             else return new Date(this.Year, this.Month+1,InvalidDayForMonth(this.Month+1,this.Day)? MaxDayOfMonth(this.Month+1):this.Day );
 
         }
         //add these private methods for help with validation - don't need to test, only need to test public facing methods
